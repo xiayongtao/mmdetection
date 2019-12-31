@@ -170,11 +170,11 @@ def show_result(img,
         score_thr=score_thr,
         show=show,
         wait_time=wait_time,
-        font_scale=0.4,
+        font_scale=1.0,
         out_file=out_file)
     if not (show or out_file):
         return img
-    
+
     return result
 
 
