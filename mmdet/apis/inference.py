@@ -168,7 +168,7 @@ def show_result(img,
             mask = maskUtils.decode(segms[i]).astype(np.bool)
             img[mask] = img[mask] * 0.5 + color_mask * 0.5
     # draw bounding boxes
-    mmcv.imshow_det_bboxes(
+    result = mmcv.imshow_det_bboxes(
         img,
         bboxes,
         labels,
@@ -179,6 +179,7 @@ def show_result(img,
         out_file=out_file)
     if not (show or out_file):
         return img
+    return result
 
 
 def show_result_pyplot(img,
